@@ -1,0 +1,21 @@
+{
+  "name": "Github Fast Review Comments",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "An extension for writing review comments quickly",
+  "homepage_url": "https://github.com/grishbar",
+  "type": "module",
+  "icons": {
+
+  },
+  "default_locale": "en",
+  "permissions": ["https://github.сom/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["comments.js", "main.js"],
+      "css": ["main.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
